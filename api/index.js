@@ -139,4 +139,5 @@ app.all("*", (req, res) => {
   });
 });
 
+// Export for Vercel
 module.exports = app;

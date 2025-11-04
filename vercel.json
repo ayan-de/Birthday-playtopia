@@ -4,6 +4,14 @@
     {
       "src": "api/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -20,13 +28,8 @@
       "dest": "/index.html"
     },
     {
-      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|html|txt|json))",
+      "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
